@@ -1,0 +1,61 @@
+2 tabelas
+1 para n
+definir id para a coluna que será a chave
+cada tabela deve ter uma chave, que será usada para o relacionamento
+chave primária
+chave extrangeira
+    - será a chave que liga as tabelas
+
+django cria as chaves primárias
+quando nao especifica a chave na model, ele definirá a primarykey
+
+pergunta = models.OneToOne(pergunta)
+    1 pra 1
+pergunta = models.ManyToMany(pergunta)
+    n pra n
+
+    quando clona o projeto
+    pip install -r requirements.txt
+
+    
+    quando faz alguma alteração nas models
+    comando:
+    python manage.py makemigrations
+
+    todas as migrations precisam ser commitadas
+    nunca mexer nas migrations
+
+    para construir tabelas no banco:
+    python manage.py migrate
+
+
+    from pesquisa.models import Pergunta, Alternativa
+
+    cadastrar Alternativa
+
+
+
+retornar as alternativas:
+
+
+from pesquisa.models import Pergunta
+
+
+
+
+fazer as migrações:
+winpty python manage.py makemigrations
+winpty python manage.py migrate
+winpty python manage.py createsuperuser
+        para acessar o admin
+            user: alessandramitie
+            pass: alessandra
+
+
+tudo que usa "for" é iterável
+
+todo dicionário tem chave e valor
+
+tudo que é crud vai para o admin
+tudo que é regra de negócio, vai para views
+
